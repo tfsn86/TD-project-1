@@ -15,7 +15,28 @@ FSJS project 1 - A Random Quote Generator
     - Add at least one `year` and/or `citation` property to at least one 
       quote object.
 ***/
-
+var quotes = [
+  {
+    quote: 'Success consists of going from failure to failure without loss of enthusiasm.',
+    source: 'Winston Churchill',
+  }
+  {
+    quote: 'Pleasure in the job puts perfection in the work.',
+    source: 'Aristotle'
+  }
+  {
+    quote: 'Wise men speak because they have something to say; fools because they have to say something.',
+    source: 'Plato'
+  }
+  {
+    quote: 'I not only use all the brains that I have, but all I can borrow.',
+    source: 'Woodrow Wilson'
+  }
+  {
+    quote: "Patience is a virtue, and I'm learning patience. It's a tough lesson.",
+    source: 'Elon Musk'
+  }
+]
 
 
 
