@@ -68,8 +68,10 @@ function getRandomQuote(array) {
     return quotes[3];
   } else if (randomNumber === 4) {
     return quotes[4];
-  } else {
+  } else if (randomNumber === 5) {
     return quotes[5];
+  } else if (randomNumber === 6) {
+    return quotes[6];
   }
 }
 
@@ -83,7 +85,21 @@ function getRandomQuote(array) {
    - set the `innerHTML` of the `quote-box` div to the HTML string. 
 ***/
 
+function printQuote() {
+  var randomQuote = getRandomQuote(quotes);
+  HTML = '';
+  HTML += '<p class="quote">' + randomQuote.quote + '</p>';
+  HTML += '<p class="source">' + randomQuote.source + '</p>';
+  if (randomQuote.citation !== undefined) {
+    HTML += '<span class="citation">' + randomQuote.citation + '</span>';    
+  }
+  if (randomQuote.year !== undefined) {
+    HTML += '<span class="year">' + randomQuote.year + '</span>';
+  }
+  document.getElementById("quote-box").innerHTML = HTML;
+}
 
+printQuote();
 
 /***
   When the "Show another quote" button is clicked, the event listener 
