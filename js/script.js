@@ -19,26 +19,34 @@ var quotes = [
   {
     quote: 'Success consists of going from failure to failure without loss of enthusiasm.',
     source: 'Winston Churchill',
-  }
+  },
   {
     quote: 'Pleasure in the job puts perfection in the work.',
     source: 'Aristotle'
-  }
+  },
   {
     quote: 'Wise men speak because they have something to say; fools because they have to say something.',
     source: 'Plato'
-  }
+  },
   {
     quote: 'I not only use all the brains that I have, but all I can borrow.',
     source: 'Woodrow Wilson'
-  }
+  },
   {
     quote: "Patience is a virtue, and I'm learning patience. It's a tough lesson.",
     source: 'Elon Musk'
+  },
+  {
+    quote: 'Every great developer you know got there by solving problems they were unqualified to solve until they actually did it.',
+    source: 'Patrick McKenzie',
+    citation: 'Twitter',
+    year: '2016'
+  },
+  {
+    quote: "I don't think that you can score as spectacular a goal as those of Zlatan in a video game - even though these games are very realistic these days.",
+    source: 'Zlatan Ibrahimovic'
   }
 ]
-
-
 
 /***
   Create the `getRandomQuote` function to:
@@ -47,8 +55,23 @@ var quotes = [
      `quotes` array.
 ***/
 
-
-
+function getRandomQuote(array) {
+  var randomNumber = 0;
+  randomNumber = Math.floor(Math.random() * quotes.length);
+  if (randomNumber === 0) {
+    return quotes[0];
+  } else if (randomNumber === 1) {
+    return quotes[1];
+  } else if (randomNumber === 2) {
+    return quotes[2];
+  } else if (randomNumber === 3) {
+    return quotes[3];
+  } else if (randomNumber === 4) {
+    return quotes[4];
+  } else {
+    return quotes[5];
+  }
+}
 
 /***
   Create the `printQuote` function to: 
@@ -59,7 +82,6 @@ var quotes = [
      they are added to the HTML string.
    - set the `innerHTML` of the `quote-box` div to the HTML string. 
 ***/
-
 
 
 
