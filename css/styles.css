@@ -68,6 +68,15 @@ body {
   font-style: normal;
 }
 
+.genre:before {
+  content: ", ";
+  font-style: normal;
+}
+
+.genre {
+  font-size: 12px;
+}
+
 #loadQuote {
   position: fixed;
   width: 12em;
