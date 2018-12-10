@@ -55,6 +55,15 @@ var quotes = [
   }
 ]
 
+var colors = [
+  'DodgerBlue',
+  'LightCoral',
+  'LightSkyBlue',
+  'NavajoWhite',
+  'Orange',
+  'YellowGreen'
+]
+
 /***
   Create the `getRandomQuote` function to:
    - generate a random number 
@@ -110,6 +119,19 @@ function printQuote() {
 
 printQuote();
 
+
+function getRandomColor(array) {
+  randomColor = Math.floor(Math.random() * colors.length);
+  return colors[randomColor];
+}
+
+function setBackgroundColor() {
+  var generateColor = getRandomColor(colors);
+  document.querySelector("body").style.background = generateColor;
+}
+
+setBackgroundColor();
+
 /***
   When the "Show another quote" button is clicked, the event listener 
   below will be triggered, and it will call, or "invoke", the `printQuote` 
@@ -118,6 +140,6 @@ printQuote();
 ***/
 
 document.getElementById('loadQuote').addEventListener("click", printQuote, false);
-
+document.getElementById('loadQuote').addEventListener("click", setBackgroundColor, false);
 
 // Remember to delete the comments that came with this file, and replace them with your own code comments.
