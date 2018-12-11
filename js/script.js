@@ -1,20 +1,11 @@
-/******************************************
-Treehouse Techdegree:
-FSJS project 1 - A Random Quote Generator
-******************************************/
+/* Treehouse Full Stack Javascript Tech Degree - Project 1. A Random Quote Generator
 
-// Study guide for this project - https://drive.google.com/file/d/1s5grutGuQFwJcQP8bFwEI69Q8FCkGdDk/view?usp=sharing
+This program is a random quote generator.
 
+*/
 
-/*** 
-  Create the array of quote objects and name it `quotes`.
-  Add at least five quote objects to the `quotes` array.
-  Give each quote object a `quote` and `source` property.
+//The quotes array stores 7 quotes as objects.
 
-  Recommended: 
-    - Add at least one `year` and/or `citation` property to at least one 
-      quote object.
-***/
 var quotes = [
   {
     quote: 'Success consists of going from failure to failure without loss of enthusiasm.',
@@ -55,6 +46,8 @@ var quotes = [
   }
 ]
 
+//The colors array is used for the background color change.
+
 var colors = [
   'DodgerBlue',
   'LightCoral',
@@ -64,12 +57,7 @@ var colors = [
   'YellowGreen'
 ]
 
-/***
-  Create the `getRandomQuote` function to:
-   - generate a random number 
-   - use the random number to `return` a random quote object from the 
-     `quotes` array.
-***/
+//The getRandomQuote function selects a random quote when executed.
 
 function getRandomQuote(array) {
   var randomNumber = 0;
@@ -91,15 +79,7 @@ function getRandomQuote(array) {
   }
 }
 
-/***
-  Create the `printQuote` function to: 
-   - call the `getRandomQuote` function and assign it to a variable.
-   - use the properties of the quote object stored in the variable to 
-     create your HTML string.
-   - use conditionals to make sure the optional properties exist before 
-     they are added to the HTML string.
-   - set the `innerHTML` of the `quote-box` div to the HTML string. 
-***/
+//The printQuote prints a quote from the getRandomQuote function.
 
 function printQuote() {
   var randomQuote = getRandomQuote(quotes);
@@ -119,11 +99,14 @@ function printQuote() {
 
 printQuote();
 
+//The getRandomColor function selects a random color.
 
 function getRandomColor(array) {
   randomColor = Math.floor(Math.random() * colors.length);
   return colors[randomColor];
 }
+
+//The setBackgroundColor function sets a random background color when it executes the getRandomColor function with the color array as an argument.
 
 function setBackgroundColor() {
   var generateColor = getRandomColor(colors);
@@ -132,17 +115,12 @@ function setBackgroundColor() {
 
 setBackgroundColor();
 
+//The window.setInterval determines how often the quote and background color changes.
+
 var intervalID = window.setInterval(printQuote, 10000);
 var intervalID = window.setInterval(setBackgroundColor, 10000);
 
-/***
-  When the "Show another quote" button is clicked, the event listener 
-  below will be triggered, and it will call, or "invoke", the `printQuote` 
-  function. So do not make any changes to the line of code below this 
-  comment.
-***/
+//The following code load a new quote and background color when executed.
 
 document.getElementById('loadQuote').addEventListener("click", printQuote, false);
 document.getElementById('loadQuote').addEventListener("click", setBackgroundColor, false);
-
-// Remember to delete the comments that came with this file, and replace them with your own code comments.
