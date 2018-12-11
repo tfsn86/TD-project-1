@@ -132,6 +132,9 @@ function setBackgroundColor() {
 
 setBackgroundColor();
 
+var intervalID = window.setInterval(printQuote, 10000);
+var intervalID = window.setInterval(setBackgroundColor, 10000);
+
 /***
   When the "Show another quote" button is clicked, the event listener 
   below will be triggered, and it will call, or "invoke", the `printQuote` 
