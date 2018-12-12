@@ -106,11 +106,14 @@ function getRandomColor(array) {
   return colors[randomColor];
 }
 
-//The setBackgroundColor function sets a random background color when it executes the getRandomColor function with the color array as an argument.
+/*The setBackgroundColor function sets a random background color when it executes the getRandomColor function with the color array as an argument.
+The button change to the same color as the background.
+*/
 
 function setBackgroundColor() {
   var generateColor = getRandomColor(colors);
   document.querySelector("body").style.background = generateColor;
+  document.getElementById("loadQuote").style.background = generateColor;
 }
 
 setBackgroundColor();
